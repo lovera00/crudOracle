@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PERSONAS">
+    <Key>
+      <PropertyRef Name="PERS_CODIGO" />
+    </Key>
+    <Property Name="PERS_CODIGO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PERS_NOMBRE" Type="varchar2" MaxLength="30" />
+    <Property Name="PERS_APELLIDO" Type="varchar2" MaxLength="30" />
+    <Property Name="PERS_NRO_DOCUMENTO" Type="varchar2" MaxLength="7" />
+    <Property Name="PERS_CORREO" Type="varchar2" MaxLength="50" />
+    <Property Name="PERS_TELEFONO" Type="varchar2" MaxLength="10" />
+    <Property Name="PERS_FCH_NACIMIENTO" Type="date" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="PERSONAS" EntityType="Self.PERSONAS" Schema="PROD" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

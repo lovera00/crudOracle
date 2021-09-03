@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PERSONAS">
+    <Key>
+      <PropertyRef Name="PERS_CODIGO" />
+    </Key>
+    <Property Name="PERS_CODIGO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PERS_NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PERS_APELLIDO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PERS_NRO_DOCUMENTO" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="PERS_CORREO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PERS_TELEFONO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PERS_FCH_NACIMIENTO" Type="DateTime" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PERSONAS" EntityType="Self.PERSONAS" />
+  </EntityContainer>
+</Schema>
